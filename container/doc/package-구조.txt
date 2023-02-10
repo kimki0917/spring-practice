@@ -1,0 +1,24 @@
+com.douzone.container.config.user
+com.douzone.container.user.test
+[src/main/java]
+com.douzone.container.soundsystem
+	|-- CDPlayer.java
+	|-- CompactDisc.java
+com.douzone.container.videosystem
+	|-- DVDPlayer.java
+	|-- DigitalVideoDisc.java
+	|-- 
+com.douzone.container.config.soundsystem
+	|-- CDPlayerConfig.java
+com.douzone.container.config.videosystem
+	|-- DVDPlayerConfig.java
+[src/main/resources]
+com.douzone.container.config.soundsystem
+	|-- applicationContext.xml
+[src/test/java]
+com.douzone.container.soundsystem
+	|-- CDPlayerXmlConfigTest.java
+	|-- CDPlyaerJavaConfigTest.java
+com.douzone.container.videosystem
+	|-- DVDPlayerJavaConfigTest.java
+@RunWith(SpringJUnit4ClassRunner.class)
