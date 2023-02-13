@@ -1,24 +1,51 @@
-com.douzone.container.config.user
-com.douzone.container.user.test
 [src/main/java]
-com.douzone.container.soundsystem
-	|-- CDPlayer.java
-	|-- CompactDisc.java
-com.douzone.container.videosystem
-	|-- DVDPlayer.java
-	|-- DigitalVideoDisc.java
-	|-- 
-com.douzone.container.config.soundsystem
-	|-- CDPlayerConfig.java
-com.douzone.container.config.videosystem
-	|-- DVDPlayerConfig.java
+	com.douzone.container.user
+		|-- User.java
+		|-- Friend.java
+
+	com.douzone.container.soundsystem
+		|--- CDPlayer.java
+		|--- CompactDisc.java
+
+	com.douzone.container.videosystem*
+		|--- DVDPlayer.java
+		|--- DigitalVideoDisc.java
+		|--- Avengers
+		
+		 
+	com.douzone.container.config.user
+		|--- AppConfig.java	
+	com.douzone.container.config.soundsystem
+		|--- CDPlayerConfig.java
+	com.douzone.container.config.videosystem
+		|--- DVDPlayerConfig.java ***
+	com.douzone.container.config.videosystem.mixing
+		|--- DVDConfig.java
+		|--- DVDPlayerConfig.java 
+		|--- VideoSystemConfig.java 
+
+
 [src/main/resources]
-com.douzone.container.config.soundsystem
-	|-- applicationContext.xml
+	com.douzone.container.config.user
+		|--- applicationContext01.xml
+		|--- applicationContext02.xml
+		
+	com.douzone.container.config.soundsystem
+		|--- applicationContext.xml
+
+	com.douzone.container.config.videosystem
+		|--- applicationContext.xml *
+
 [src/test/java]
-com.douzone.container.soundsystem
-	|-- CDPlayerXmlConfigTest.java
-	|-- CDPlyaerJavaConfigTest.java
-com.douzone.container.videosystem
-	|-- DVDPlayerJavaConfigTest.java
-@RunWith(SpringJUnit4ClassRunner.class)
+	com.douzone.container.soundsystem
+		|--- CDPlayerXmlConfigTest.java
+		|--- CDPlayerJavaConfigTest.java
+
+     com.douzone.container.videosystem
+		|--- DVDPlayerJavaConfigTest.java
+		|--- DVDPlayerXmlConfigTest.java 
+		
+	com.douzone.container.config.videosystem.mixing
+		|--- DVDPlayerMixingConfigTest01.java ***
+		|--- DVDPlayerMixingConfigTest02.java ***
+		
